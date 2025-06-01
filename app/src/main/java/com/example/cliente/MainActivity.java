@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main); // Certifique-se que o layout é activity_main
+        setContentView(R.layout.activity_main); 
 
-        // Vinculando os componentes
+        
         etNome = findViewById(R.id.etNome);
         etTelefone = findViewById(R.id.etTelefone);
         btnCadastrar = findViewById(R.id.btnCadastrar);
 
-        // Ação do botão
+    
         btnCadastrar.setOnClickListener(v -> {
             String nome = etNome.getText().toString().trim();
             String telefone = etTelefone.getText().toString().trim();
