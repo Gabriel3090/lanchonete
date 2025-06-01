@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Faça seu pedido"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escolha o sanduíche: R$20"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSanduiches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbXSalada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X-Salada"
+                android:textColor="#212121" />
+
+            <RadioButton
+                android:id="@+id/rbXBacon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X-Bacon"
+                android:textColor="#212121" />
+
+            <RadioButton
+                android:id="@+id/rbXFrango"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X-Frango"
+                android:textColor="#212121" />
+
+            <RadioButton
+                android:id="@+id/rbVeggie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Veggie"
+                android:textColor="#212121" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escolha o refrigerante: R$5"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgRefrigerantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbCoca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coca-Cola"
+                android:textColor="#212121" />
+
+            <RadioButton
+                android:id="@+id/rbPepsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pepsi"
+                android:textColor="#212121" />
+
+            <RadioButton
+                android:id="@+id/rbGuarana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guaraná"
+                android:textColor="#212121" />
+
+            <RadioButton
+                android:id="@+id/rbFanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fanta"
+                android:textColor="#212121" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acompanhamentos: R$ 5"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"/>
+
+        <CheckBox
+            android:id="@+id/cbBatataFrita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Batata Frita"
+            android:textColor="#212121" />
+
+        <CheckBox
+            android:id="@+id/cbOnionRings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onion Rings"
+            android:textColor="#212121" />
+
+        <CheckBox
+            android:id="@+id/cbSalada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salada Extra"
+            android:textColor="#212121" />
+
+        <EditText
+            android:id="@+id/etQuantidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite a quantidade"
+            android:textColorHint="#757575"
+            android:textColor="#212121"
+            android:textSize="22sp"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btnAdicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar ao Pedido"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 0,00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnFinalizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finalizar Pedido"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</ScrollView>
