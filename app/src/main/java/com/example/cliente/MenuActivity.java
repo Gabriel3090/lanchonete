@@ -30,9 +30,9 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_menu);  // Certifique-se que menu.xml existe no res/layout
+        setContentView(R.layout.activity_menu);  
 
-        // Ligação com os elementos do layout
+        
         rgSanduiches = findViewById(R.id.rgSanduiches);
         rgRefrigerantes = findViewById(R.id.rgRefrigerantes);
         cbBatataFrita = findViewById(R.id.cbBatataFrita);
@@ -43,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
         btnFinalizar = findViewById(R.id.btnFinalizar);
         tvTotal = findViewById(R.id.tvTotal);
 
-        // Botão "Adicionar"
+ 
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +94,7 @@ public class MenuActivity extends AppCompatActivity {
                 total += precoTotalItem;
                 tvTotal.setText(String.format("R$ %.2f", total));
 
-                // Limpar os campos
+               =
                 rgSanduiches.clearCheck();
                 rgRefrigerantes.clearCheck();
                 cbBatataFrita.setChecked(false);
@@ -104,7 +104,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        // Botão "Finalizar"
+       
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +127,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 Toast.makeText(MenuActivity.this, resumo.toString(), Toast.LENGTH_LONG).show();
 
-                // Simula salvar no banco de dados
+                
                 Toast.makeText(MenuActivity.this, "Pedido salvo no banco de dados com sucesso!", Toast.LENGTH_SHORT).show();
 
                 listaItens.clear();
@@ -137,7 +137,7 @@ public class MenuActivity extends AppCompatActivity {
         });
     }
 
-    // Classe interna representando um item do pedido
+    
     private static class ItemPedido {
         String sanduiche;
         String refrigerante;
