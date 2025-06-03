@@ -68,7 +68,7 @@ public class MenuActivity extends AppCompatActivity {
                 if (cbOnionRings.isChecked()) acompanhamentos.add("Onion Rings");
                 if (cbSalada.isChecked()) acompanhamentos.add("Salada Extra");
 
-                String qtdStr = etQuantidade.getText().toString().trim();
+                String qtdStr = etQuantidade.getText().toString();
                 int quantidade;
                 try {
                     quantidade = Integer.parseInt(qtdStr);
